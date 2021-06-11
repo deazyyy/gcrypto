@@ -1,0 +1,174 @@
+.ctxt1-1{
+	width: 40%;
+	text-align: center;
+	opacity: 1;
+    font-size: 36px;
+    color: white;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    transition: 1s all ease-out;
+}
+
+#ctxt1-2{
+	font-weight: 700;
+}
+
+@media only screen and (max-width: 1200px){
+
+.ctxt1-1{
+	width: 40%;
+	font-size: 24px;
+}
+
+}
+
+@media only screen and (max-width: 500px){
+
+.ctxt1-1{
+	width: 80%;
+	font-size: 20px;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// vbox  box
+
+
+#vbox1{
+	display: inline-block;
+	height: 200px;
+	width: 440px;
+	margin: 20px 20px 20px 0px;
+	box-sizing: border-box;
+	background-color: rgba(8,15,14,0.69);
+	border-radius: 10px;
+}
+
+#vbox2{
+	display: inline-block;
+	height: 200px;
+	width: 440px;
+	margin: 20px 20px 20px 0px;
+	box-sizing: border-box;
+	background-color: rgba(8,15,14,0.69);
+	border-radius: 10px;
+}
+
+#vbox1-h{
+	font-weight: 500;
+	font-size: 18px;
+	width: 100%;
+	border-bottom: 1px solid rgba(255,255,255,0.5);
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+#vbox-date{
+	font-weight: 300;
+	color: #C1FFD5;
+	margin: 0px 12px;
+}
+
+@media only screen and (max-width: 800px){
+	#vbox2{
+		display: none;
+	}
+
+	#vbox1{
+		width: 100%!important;
+	}
+}
+
+
+
+
+// version box
+#versionbox{
+	position: relative;
+	width: 75%;
+	top: 60%;
+	left: 50%;
+	transform: translate(-33%);
+}
+
+#vh{
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 27px;
+	display: inline-block;
+}
+
+.lf{
+	background: transparent;
+	outline: none;
+	border: 2px solid rgba(117,240,157,0.1);
+}
+
+#left-right{
+	display: inline-block;
+	position: absolute;
+	left: 50%;
+}
+
+#vh-parent{
+	width: 100%;
+	position: relative;
+}
+
+.lf>img{
+	padding: 5px 2px;
+}
+
+#lf-l{
+	border-radius: 5px 0px 0px 5px;
+}
+
+#lf-r{
+	border-radius: 0px 5px 5px 0px;
+	background: linear-gradient(to right, transparent, rgba(117,240,157,0.2));
+}
+
+@media only screen and (max-width: 800px){
+
+#versionbox{
+	left: 40%;
+}
+
+#left-right{
+	left: 72%;
+}
+
+#vbox2{
+	display: none;
+}
+
+}
+
+@media only screen and (max-width: 500px){
+
+#versionbox{
+	top: 50%;
+}
+
+}

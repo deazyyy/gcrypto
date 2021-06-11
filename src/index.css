@@ -1,0 +1,72 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins', sans-serif;
+	position: relative;
+	overflow-x: hidden;
+	/*overflow-y: hidden;*/
+	color: white;
+	min-width: 360px;
+}
+
+#page1{
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	opacity: 1;
+}
+
+#page2{
+	display: none;
+}
+
+@keyframes slidedown{
+	0% {transform: translate(-33%,0%)}
+	25% {transform: translate(-33%,-50%)}
+	100% {transform: translate(-33%,150%)}
+}
+
+@keyframes contanim{
+	0% {transform: translate(-100%,0%); opacity: 0}
+	100% {transform: translate(0%,0%); opacity: 1}
+}
+
+@keyframes contanim2{
+	0% {left: -270px}
+	100% {left:  0px}
+}
+
+@keyframes containeranim{
+	0% {transform: translate(0%,-100%); opacity: 0}
+	100% {transform: translate(0%,0%); opacity: 1}
+}
+
+@keyframes mainpage{
+	0% {transform: translate(0%,40%); opacity: 0}
+	100% {transform: translate(0%,0%); opacity: 1}	
+}
+
+.display{
+	display: block;
+	opacity: 1;
+}
+
+@keyframes fade{
+	0% {opacity: 0}
+	100%{opacity: 1}
+}
+
+@media only screen and (max-width: 1260px){
+
+#container{
+	display: none;
+}
+
+#container2{
+	display: block!important;
+}
+
+
+
+}
+

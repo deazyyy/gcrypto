@@ -1,0 +1,54 @@
+.launchapp-btn{
+	/*width: 227px;
+	height: 54px;*/
+	position: relative;
+	padding: 30px;
+	margin: auto;
+	transition: 0.3s all ease-out;
+	z-index: 10;
+}
+
+.la-btn{
+	position: absolute;
+	width: 218px;
+	height: 49px;
+	font-weight: 500;
+	border-radius: 4px;
+	color: white;
+	letter-spacing: 1px;
+	font-size: 14px;
+	background-color: transparent;
+	background-image: linear-gradient(to right,rgba(117, 240, 157, 0.2) , rgba(97, 232, 183, 0.1));
+	box-sizing: border-box;
+	border: 3px solid rgba(97, 232, 183, 0.69);
+	left: 50%;
+	transform: translate(-50%,0%);
+}
+
+.extraborder{
+	position: absolute;
+	width: 218px;
+	height: 49px;
+	border-radius: 4px;
+	transform: translate(3%,-90%);
+	border: 3px solid rgba(97, 232, 183, 0.1);
+	box-sizing: border-box;
+	left: 50%;
+	transform: translate(-47%,10%);
+}
+
+.extraglow{
+	position: absolute;
+	width: 218px;
+	height: 49px;
+	border-radius: 4px;
+	box-sizing: border-box;
+	background-image: radial-gradient(rgba(83, 255, 131, 0.2) ,transparent );
+	left: 50%;
+	transform: translate(-50%,0%);
+	z-index: -1;
+}
+
+.launchapp-btn:hover{
+	cursor: pointer;
+}
