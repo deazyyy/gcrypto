@@ -31,7 +31,7 @@ function lauchApp(){
   $("#bckimg").css({"animation": "sliding 1s ease-in-out forwards"});
   $('.Logo').css({'opacity':'0'});
   $('.ctxt1-1').css({'opacity':'0'});
-  $('#versionbox').css({"animation": "slidedown 1s ease-in-out forwards"});
+  $('#versionbox').css({'opacity':'0'});
   
   setTimeout(function(){
     $('#page1').css({'display':'none'});

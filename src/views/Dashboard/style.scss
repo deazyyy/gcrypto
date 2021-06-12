@@ -314,76 +314,87 @@
   transition: 2s all ease-out;
   /*display: none;*/
   margin-top: 100px;
-}
-
-.head-main {
-  position: relative;
-  font-size: 36px;
-  color: white;
-  line-height: 54px;
-  font-weight: 400;
+  .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    .head-main {
+      position: relative;
+      font-size: 36px;
+      color: white;
+      line-height: 54px;
+      font-weight: 400;
+    }
+    .head-amount {
+      color: rgba(193, 255, 213, 1);
+      font-size: 16px;
+      .tvl-amount {
+        font-weight: 500;
+        color: rgba(193, 255, 213, 1);
+      }
+    }
+   
+    
+  }
 }
 
 .head-bold {
   font-weight: 700;
 }
 
-.head-amount {
-  position: absolute;
-  right: 0px;
-  top: 15px;
-  color: rgba(193, 255, 213, 0.5);
-  font-size: 16px;
-}
 
-.tvl-amount {
-  font-weight: 600;
-  color: rgba(193, 255, 213, 1);
-}
+
 
 .audit {
   position: relative;
-  margin: 20px 0px;
+  margin-bottom: 20px;
   width: 100%;
-  border: 2px solid rgba(193, 255, 213, 0.2);
+  border: 2px solid rgba(117, 240, 196, 0.1);
   border-radius: 10px;
-  height: 66px;
+  // height: 66px;
   box-sizing: border-box;
   background: rgba(34, 95, 70, 0.25);
-  color: rgba(193, 255, 213, 1);
+  color: #E7FFEE;
+  display: flex;
+  align-items: center;
 }
 
 .audit > div {
   display: inline-block;
 }
 
-/*.chat-icon-box{
-	width: 100%;
-	border: 2px solid rgba(193, 255, 213, 0.5);
-	border-radius: 5px;
-	height: 66px;
+.chat-icon-box{
+	border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-right: 2px solid #2A5243;
+  border: 2px solid rgba(117, 240, 196, 0.1);
 	box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #2D5747;
+  margin: -2px;
 }
-*/
+
 .chat-icon {
-  border-radius: 10px 0px 0px 10px;
-  height: 20px;
+  height: auto;
   width: 20px;
-  padding: 22px;
-  border-right: 2px solid rgba(193, 255, 213, 0.1);
-  background: rgba(34, 95, 70, 0.5);
+  padding: 22px 25px;
 }
 
 .audit-text {
-  position: absolute;
   width: 75%;
-  padding: 8px;
+  padding: 10px ;
+  font-weight: 300;
+  margin-left: 8px;
 }
 
-#cross-icon {
+.cross-icon {
   position: absolute;
   right: 10px;
   top: 5px;
+  cursor: pointer;
 }
 
 .deposit-box {
@@ -396,11 +407,26 @@
   box-sizing: border-box;
   padding: 25px 30px;
   border-radius: 10px;
+  overflow: hidden;
+  &:before{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background: rgba(34, 95, 70, 0.5);
+    filter: blur(10px);
+  }
 }
 
 .deposit-head {
   font-size: 14px;
   color: rgba(193, 255, 213, 1);
+  font-weight: 200 ;
+  margin-bottom: 8px;
 }
 
 #show-icon {
@@ -427,11 +453,24 @@
   width: 67%;
   height: 110px;
   margin-left: 2%;
-  border: 2px solid rgba(193, 255, 213, 0.1);
+  border: 1px solid rgba(117, 240, 196, 0.1);
   background: rgba(34, 95, 70, 0.5);
   box-sizing: border-box;
   padding: 25px 30px;
   border-radius: 10px;
+  overflow: hidden;
+  &:before{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background: rgba(34, 95, 70, 0.7);
+    filter: blur(10px);
+  }
 }
 
 #harvest-btn {
@@ -442,11 +481,12 @@
   width: 131px;
   height: 41px;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 300;
   color: rgba(193, 255, 213, 1);
   background: transparent;
   border-radius: 5px;
   border: 2px solid rgba(193, 255, 213, 0.1);
+  cursor: pointer;
 }
 
 .utopia-pending-2 {
@@ -540,18 +580,57 @@
 
 // ptopiabox
 
+.ptopiaboxouter{
+  position: relative;
+ // background: rgba(23, 59, 43, 0.5);
+  //overflow: hidden;
+  margin: 15px 0;
+ 
+  border-radius: 12px;
+  width: calc(100% - 60px);
+  // s
+  .ptopia-box-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(193, 255, 213,0.05);
+    // background: url("../../images/accordionbg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background: rgba(20, 50, 40, 0.8);
+    &::before{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+    
+      filter: blur(1px);
+    // z-index:999;
+    //   z-index: -1;      
+    }
+  }
+
+}
 .ptopiabox {
   position: relative;
   max-height: 495px;
-  width: 95%;
 }
 
 .ptopiabox-initial {
   position: relative;
   width: 100%;
   height: 110px;
-  margin: 20px 0px 0px 0px;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .ptopiabox-initial > div,
@@ -581,7 +660,7 @@
 
 #get-topia-btn {
   position: absolute;
-  right: 0px;
+  right: -20px;
   top: 30%;
   margin: 0;
   padding: 0;
@@ -632,14 +711,14 @@
 
 .ptopiabox-text {
   font-size: 14px;
-  font-weight: 400;
-  color: rgba(193, 255, 213, 1);
+  font-weight: 300;
+  color: rgba(193, 255, 213, 0.4)
 }
 
 #ptopiabox-text2 {
   font-size: 14px;
   font-weight: 400;
-  color: rgba(193, 255, 213, 1);
+  color: rgba(193, 255, 213, 0.4)
 }
 
 #ptopiabox-factor {
@@ -656,17 +735,18 @@
 .pending-dollars {
   position: relative;
   top: -2px;
-  font-size: 16px;
+  font-size: 15px;
   color: rgba(193, 255, 213, 1);
-  padding: 4px 6px;
+  padding: 4px 8px;
   border-radius: 5px;
   border: 1px solid rgba(117, 240, 196, 0.1);
+  font-weight: 200;
 }
 
 .wallet {
   height: 235px;
   position: relative;
-  width: 336px;
+  width: 100%;
   background: rgba(34, 95, 70, 0.5);
   box-sizing: border-box;
   padding: 20px;
@@ -687,11 +767,15 @@
 
 .get-ptopia {
   font-size: 14px;
-  color: rgba(117, 240, 157, 1);
+  color: rgba(117, 240, 157, 0.7);
   text-decoration: underline;
   position: relative;
-  left: 75%;
+ // left: 75%;
+//  text-align: right;
   padding: 16px 0px;
+  cursor: pointer;
+  width: fit-content;
+  margin-left: auto;
 }
 
 .wallet-value {
@@ -700,6 +784,23 @@
   width: 100%;
   border: 2px solid rgba(117, 240, 196, 0.1);
   border-radius: 10px;
+  
+  input{
+    height: 100%;
+    border: none;
+    outline: none;
+    width: -webkit-fill-available ;
+    padding: 0 20px;
+    background: transparent;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    &::placeholder{
+      color: #fff;
+      font-size: 16px;
+      font-weight: 500;
+    }
+  }
 }
 
 #w-val {
@@ -710,6 +811,7 @@
 }
 
 .wallet-max-btn {
+  cursor: pointer;
   position: absolute;
   padding: 4px 14px;
   background: radial-gradient(
@@ -721,11 +823,19 @@
   right: 0px;
   top: 50%;
   transform: translate(0%, -50%);
+  color: #75F09D;
+  z-index: 10;
 }
 
 #ptopia-flex {
-  display: inline-flex;
+  display: flex;
   width: 100%;
+  justify-content: space-between;
+  .launchapp-btn{
+    max-width: unset;
+    width: 100%;
+    margin-top: 20px;
+  }
 }
 
 #vault-get-ptopia {
@@ -741,56 +851,14 @@
   background: #dfea6b;
 }
 
-#la-btn {
-  position: absolute;
-  width: 218px;
-  height: 49px;
-  font-weight: 500;
-  border-radius: 4px;
-  color: white;
-  letter-spacing: 1px;
-  font-size: 14px;
-  background-color: transparent;
-  background-image: linear-gradient(
-    90deg,
-    rgba(238, 240, 117, 0.4) 0%,
-    rgba(164, 232, 97, 0.2) 100%
-  );
-  box-sizing: border-box;
-  border: 3px solid rgba(97, 232, 183, 0.69);
-  left: 50%;
-  transform: translate(-50%, 0%);
+.ptopia-box{
+  height: auto;
+ // min-height: 230px;
 }
-
-#extraborder {
-  position: absolute;
-  width: 218px;
-  height: 49px;
-  border-radius: 4px;
-  transform: translate(3%, -90%);
-  border: 3px solid rgba(97, 232, 183, 0.2);
-  box-sizing: border-box;
-  left: 50%;
-  transform: translate(-47%, 10%);
-}
-
-#extraglow {
-  position: absolute;
-  width: 218px;
-  height: 49px;
-  border-radius: 4px;
-  box-sizing: border-box;
-  background: rgba(238, 240, 117, 0.5);
-  left: 50%;
-  border: 2px solid rgba(223, 234, 107, 1);
-  transform: translate(-50%, 0%);
-  z-index: -1;
-}
-
 .pending {
   position: relative;
   height: 235px;
-  width: 336px;
+  width: 100%;
   text-align: center;
   background: rgba(34, 95, 70, 0.5);
   box-sizing: border-box;
@@ -798,37 +866,62 @@
   border-radius: 10px;
   border: 2px solid rgba(117, 240, 196, 0.1);
   margin: 0px 20px;
+  .launchapp-btn{
+    margin-left: 0;
+    margin-top: -5px !important ;
+  }
+  .la-btn{
+    border:2px solid rgba(238, 240, 117, 0.8);
+    background-image: linear-gradient(
+90deg
+, rgba(238, 240, 117, 0.2) 0%, rgba(164, 232, 97, 0.1) 100%);
+  }
+  .extraglow{
+    background: rgba(238, 240, 117, 0.5);
+  }
+  .extraborder{
+    border:2px solid rgba(238, 240, 117, 0.2);
+    background: rgba(238, 240, 117, 0.1);
+  }
 }
 
-#yellow-vault-btn {
-  position: relative;
-}
+// #yellow-vault-btn {
+//   position: relative;
+// }
 
 .pending > div {
   margin: 15px;
 }
 
 .blackbox {
-  margin: 20px 0px 0px 0px;
+  // margin: 20px 0px 0px 0px;
   height: 129px;
   position: relative;
-  width: 99.9%;
+  width: 100%;
   padding: 20px;
   box-sizing: border-box;
-  display: inline-flex;
+  display: flex;
   font-size: 14px;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(0, 0, 0, 0.3);
+  margin-top: 20px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 
-#bb-overlay {
-  display: block;
-  position: absolute;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  height: 100%;
-  z-index: -1;
-  transform: translate(-18px, -20px);
-  border-radius: 0px 0px 10px 10px;
-}
+// #bb-overlay {
+//   display: block;
+//   position: absolute;
+//   width: 100%;
+//   background: rgba(0, 0, 0, 0.6);
+//   height: 100%;
+//   z-index: -1;
+//   transform: translate(-18px, -0);
+//   border-radius: 0px 0px 10px 10px;
+//   margin: 0 -1px -2px;
+//   z-index: -1;
+// }
 
 .blackbox-annual > div {
   padding: 0px 70px 5px 0px;
@@ -837,6 +930,11 @@
 .bb-h1,
 .bb-t {
   color: rgba(193, 255, 213, 1);
+}
+
+.bb-h1{
+  color: rgba(193, 255, 213, 0.4);
+  font-weight: 200;
 }
 
 .bb-n {
@@ -852,11 +950,12 @@
 }
 
 .ptopia-show {
-  opacity: 0;
-  transition: 1s all ease-out;
+  // transition: 1s all ease-out;
   transform-origin: top;
-  max-height: 0px;
+  // max-height: 0px;
   overflow: hidden;
+  //animation: "fade 0.5s ease-in-out forwards";
+  transition: all 1s  ease-in-out;
 }
 
 #ptopia-box-overlay2 {
@@ -867,7 +966,7 @@
   height: 492px;
   border-radius: 10px;
   border: 2px solid rgba(117, 240, 196, 0.1);
-  z-index: -1;
+  z-index: 10;
 }
 
 @media only screen and (max-width: 1050px) {
@@ -1265,17 +1364,31 @@ p{
 
 #toggle-side{
 	margin: 30px 0px;
+  border: 2px solid #12261D;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  margin-right: 10px;
+
+  .side-btn{
+    padding: 10px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    margin: -2px;
+    color: #C1FFD5;
+    border: 2px solid transparent;
+  }
+  .active-btn{
+    background-image: linear-gradient(to right, rgba(117,240,157,0.4), rgba(117,240,157,0.1));
+    border: 2px solid #3B8667;
+    color: #fff;
+  }
 }
 
-.side-btn{
-	padding: 10px 30px;
-	border-radius: 1px;
-	border: 1px solid rgba(117,240,157,0.6);
-}
 
-#active-btn{
-	background-image: linear-gradient(to right, rgba(117,240,157,0.4), rgba(117,240,157,0.1));
-}
+
+
 
 .dropdown-menu{
 	box-sizing: border-box;
@@ -1303,6 +1416,9 @@ p{
 .dd-box{
 	position: relative;
 	margin: 20px 0px;
+  select{
+    outline: none;
+  }
 }
 
 #arrow-icon{
