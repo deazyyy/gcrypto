@@ -9,7 +9,7 @@
   left: 50%;
   transform: translate(-50%, 0%);
   transition: 1s all ease-out;
-  .la-btn{
+  .la-btn {
     padding: 16px 20px;
   }
 }
@@ -37,12 +37,12 @@
 }
 
 // vbox  box
-.versionboxmainouter{
+.versionboxmainouter {
   overflow-x: hidden;
 }
 .versionboxouter {
   display: flex;
-  transition: all 0.6s ease-in ;
+  transition: all 0.6s ease-in;
   position: relative;
   left: 0;
 }
@@ -52,7 +52,7 @@
   border-radius: 10px;
   min-width: 500px;
   opacity: 0.6;
-  transition: all 0.2s ease-in ;
+  transition: all 0.2s ease-in;
   .header {
     font-weight: 400;
     font-size: 18px;
@@ -108,31 +108,29 @@
   line-height: 27px;
   display: inline-block;
 }
-.left-right{
-	border: 2px solid rgba(117, 240, 157, 0.1);
-	border-radius: 8px;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	button{
-		border: none;
-		background: transparent;
-		width: 40px;
-		height: 35px;
-		cursor: pointer;
-	}
-	img{
-		margin: 0 7px;
-	}
-	#lf-r{
-		border-left: 1px solid rgba(117, 240, 157, 0.1);
-	}
-	#lf-l{
-		border-right: 1px solid rgba(117, 240, 157, 0.1);
-	}
+.left-right {
+  border: 2px solid rgba(117, 240, 157, 0.1);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  button {
+    border: none;
+    background: transparent;
+    width: 40px;
+    height: 35px;
+    cursor: pointer;
+  }
+  img {
+    margin: 0 7px;
+  }
+  #lf-r {
+    border-left: 1px solid rgba(117, 240, 157, 0.1);
+  }
+  #lf-l {
+    border-right: 1px solid rgba(117, 240, 157, 0.1);
+  }
 }
-
-
 
 #vh-parent {
   width: 100%;
@@ -155,10 +153,6 @@
 // }
 
 @media only screen and (max-width: 800px) {
-  #versionbox {
-    left: 40%;
-  }
-
   #left-right {
     left: 72%;
   }
@@ -167,7 +161,13 @@
     display: none;
   }
 }
-
+@media only screen and (max-width: 700px) {
+  #versionbox {
+    .vbox {
+      min-width: 100%;
+    }
+  }
+}
 @media only screen and (max-width: 500px) {
   #versionbox {
     top: 50%;

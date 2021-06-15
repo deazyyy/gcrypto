@@ -7,7 +7,6 @@ import Plutopiaicon1 from './images/Plutopia-Icon-1.png';
 import Ptopiabox from './Ptopiabox.js';
 import group40 from './images/Group40.png';
 import group52 from './images/Group52.png';
-import Vaultdetails from './Vaultdetails.js';
 import $ from 'jquery';
 
 const Mainpage = (props) => {
