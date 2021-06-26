@@ -363,7 +363,7 @@
   font-weight: 700;
 }
 
-.audit {
+#audit {
   position: relative;
   margin-bottom: 20px;
   width: 100%;
@@ -375,9 +375,20 @@
   color: #e7ffee;
   display: flex;
   align-items: center;
+  // transition: all 1s linear;
+  animation-duration: 1s;
+            animation-fill-mode: both;
+}
+.audithide{
+  animation-name: fadeIn;
 }
 
-.audit > div {
+@keyframes fadeIn {
+  0% {opacity: 1;}
+  100% {opacity: 0;}
+} 
+
+#audit > div {
   display: inline-block;
 }
 
@@ -515,7 +526,7 @@
   color: rgba(193, 255, 213, 1);
   background: transparent;
   border-radius: 5px;
-  border: 2px solid rgba(193, 255, 213, 0.1);
+  border: 3px solid rgba(117, 240, 157, 0.2);
   cursor: pointer;
 }
 
@@ -567,7 +578,7 @@
     padding: 49px 22px;
   }
 
-  .audit {
+  #audit {
     height: 120px;
   }
 
@@ -995,7 +1006,7 @@
   // max-height: 0px;
   overflow: hidden;
   //animation: "fade 0.5s ease-in-out forwards";
-  transition: all 1s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 #ptopia-box-overlay2 {
@@ -1359,6 +1370,8 @@ p {
   padding: 16px;
   img {
     height: 40px;
+    display: block;
+    margin: 30px auto 0;
   }
 }
 

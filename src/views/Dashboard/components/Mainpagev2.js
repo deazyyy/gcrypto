@@ -9,6 +9,12 @@ import Ptopiabx from "./json/ptopiabx";
 const Mainpagev2 = (props) => {
   const [certikinfo, setCertikinfo] = useState(true);
   const [showdeposit, setShowdeposit] = useState(true);
+  function hidecertik(){
+    setCertikinfo(false);
+    setTimeout(() => {
+      document.getElementById("audit").style.display = "none";
+    }, 1000);
+  }
   return (
     <>
       <div id="mainpage">
@@ -22,8 +28,9 @@ const Mainpagev2 = (props) => {
         </div>
 
         <div
-          className="audit"
-          style={{ display: certikinfo == true ? "flex" : "none" }}
+          className={certikinfo == true ? "" : "audithide" }
+          id="audit"
+
         >
           <div className="chat-icon-box">
             <img className="chat-icon" src={Chat}></img>
@@ -33,7 +40,7 @@ const Mainpagev2 = (props) => {
             here. Meanwhile you can read Techrate.org audit which is already
             complete here.
           </div>
-          <div className="cross-icon" onClick={() => setCertikinfo(false)}>
+          <div className="cross-icon" onClick={hidecertik}>
             <img src={Cross}></img>
           </div>
         </div>

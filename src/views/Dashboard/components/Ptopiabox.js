@@ -61,7 +61,7 @@ const Ptopiabox = (props) => {
         <div
           className="ptopia-show"
           id={props.ids}
-          style={{ height: expanded == false ? 0 : "auto" }}
+          style={{ maxHeight: expanded == false ? 0 : "1100px" }}
         >
           <div className="ptopia-show-data-outer">
             <div className="ptopia-show-data">
