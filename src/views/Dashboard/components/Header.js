@@ -10,6 +10,20 @@ const Header = (props) => {
   const AccountModal = useRef(null);
   const VaultModal = useRef(null);
   const SwampModal = useRef(null);
+  function accountmodal(){
+    // @ts-ignore
+    AccountModal.current.openModal();
+  }
+
+  function vaultModal() {
+      // @ts-ignore
+      VaultModal.current.openModal();
+  }
+
+  function swampModal() {
+      // @ts-ignore
+      SwampModal.current.openModal();
+  }   
   return (
     <div id="container">
       <Accountdetails ref={AccountModal} />
@@ -17,9 +31,9 @@ const Header = (props) => {
       <Yourswamp ref={SwampModal} />
       <div id="nav">
         <ul id="navlist">
-          <li>Earn</li>
-          <li>Tutorials</li>
-          <li>Docs</li>
+          <li onClick={accountmodal}>Earn</li>
+          <li onClick={vaultModal}>Tutorials</li>
+          <li onClick={swampModal}>Docs</li>
           <li>Buy BNB</li>
           <li>Download Wallet</li>
         </ul>
