@@ -13,17 +13,6 @@
     padding: 14px 20px;
   }
 }
-// .pop-up2 {
-//   position: absolute;
-//   z-index: 20;
-//   height: 100vh;
-//   width: 100vw;
-//   transition: 0.5s all ease-out;
-// }
-
-// #accountdetails {
-//   display: block;
-// }
 
 .pop-up-overlay2 {
   position: absolute;
@@ -1600,4 +1589,244 @@ p {
   #crossbtn {
     display: block;
   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// lpmodal
+
+.lpmodal{
+  .pop-up-vault2{
+    padding-bottom: 0;
+  }
+  
+}
+
+#accountdetails2{
+	z-index: 20;
+}
+
+
+
+
+.pop-lp-head{
+	padding: 22px 26px;
+}
+
+.popl-h1{
+	color: white;
+	font-size: 24px;
+	font-weight: 400;
+	text-align: Left;
+}
+
+.pop-h1-2{
+	color: rgba(193, 255, 213, 1);
+	font-size: 14px;
+	line-height: 21px;
+}
+
+#boldlp{
+	font-weight: 600;
+}
+
+.pop-vault-head>div{
+	display: inline-block;
+}
+
+#lcross{
+	padding: 10px 20px;
+	right:  30px;
+	top: 30px;
+	position: absolute;
+	font-size: 20px;
+	color: rgba(193, 255, 213, 1);
+  cursor: pointer;
+}
+
+#cross:hover{
+	cursor: pointer;
+}
+
+.pop-t2{
+	font-size: 14px;
+	position: relative;
+	text-align: center;
+	font-weight: 500;
+}
+
+.lbody{
+	position: relative;
+	/*margin: 25px 0px;*/
+}
+
+.l-dropdown{
+	border: 2px solid rgba(193, 255, 213, 0.3);
+	width: 90%;
+	height: 41px;
+	margin: 20px auto;
+	box-sizing: border-box;
+	border-radius: 5px;
+	position: relative;
+}
+
+#zero-max{
+	border: 2px solid rgba(193, 255, 213, 0.3);
+	width: 90%;
+	height: 41px;
+	margin: 10px auto;
+	box-sizing: border-box;
+	border-radius: 5px;
+	position: relative;
+}
+
+.l-dash{
+	position: relative;
+	top: 50%;
+	transform: translate(25%,-50%);
+}
+
+.l-bnb{
+	position: relative;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 40px;
+	top: -10%;
+	left: 5%;
+}
+
+.l-dash-2{
+	position: relative;
+	top: 50%;
+	transform: translate(15%,-50%);
+}
+
+.l-bnb-2{
+	position: relative;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 40px;
+	top: -20%;
+	left: 5%;
+}
+
+#arrow-icon3{
+	position: absolute;
+	right: 20px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+#zeronum{
+	position: relative;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 40px;
+	left: 5%;
+}
+
+#max{
+	position: relative;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 40px;
+	top: -5%;
+	border-radius: 5px;
+	left: 77%;
+	color: rgba(117, 240, 157, 1);
+	padding: 4px 14px;
+	background: rgba(83, 255, 131, 0.1);
+}
+
+.lbody2{
+	padding: 0px 20px;
+}
+
+#disconnect{
+	padding: 15px;
+}
+
+#balance-1{
+	position: relative;
+	margin: auto;
+	width: 90%;
+	font-weight: 300;
+	font-size: 14px;
+	color: rgba(193, 255, 213, 1);	
+}
+
+#balnum{
+	font-weight: 500;
+}
+
+#doubledown{
+	position: relative;
+	width: 100%;
+}
+
+#doubledown-img{
+	position: relative;
+	left: 50%;
+	transform: translate(-50%);
+	margin: 28px auto;
+}
+
+#l-drpdwn2{
+	margin: 10px auto;
+}
+
+.lbody3{
+	background: rgba(14, 23, 18, 0.3);
+	position: relative;
+	top: 2%;
+	border-radius: 10px;
+	height: 247px;
+	width: 100%;
+}
+
+.btm-txt-h{
+	position: relative;
+	width: 80%;
+	text-align: left;
+	padding: 10px 10px 10px 40px;
+	font-size: 16px;
+	color: rgba(193, 255, 213, 0.5);
+	font-weight: 400;
+}
+
+.btm-txt-p{
+	position: relative;
+	float: right;
+	color: white;
+	font-weight: 600;
+}
+
+#vault-txt-h{
+	margin: 20px 10px 10px 40px;
+	padding: 15px 0px;
+	border-bottom: 1px solid rgba(193,255,213,0.2);
+}
+
+
+
+@media only screen and (max-width: 400px){
+
+.pop-up-vault2{
+	width: 90%;
+}
+
 }
