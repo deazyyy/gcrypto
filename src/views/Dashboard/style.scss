@@ -174,11 +174,12 @@
   background: #111b19;
 }
 
-#navbtn {
+.navbtn {
   display: inline-block;
   position: absolute;
   padding: 0;
   top: 15%;
+  z-index: 10;
 }
 
 #navlist {
@@ -1829,4 +1830,34 @@ p {
 	width: 90%;
 }
 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+// unlock button
+.unlockframe{
+	position:relative;
+  background: #17362e;
+  border-radius: 10px;
+  overflow: hidden;
+  padding-bottom: 20px;
+  background-image: linear-gradient(
+180deg
+, rgba(117, 240, 196, 0) 40.15%, rgba(117, 240, 196, 0.15) 100%);
+	@media (max-width: 550px) {
+		padding:45px;
+		&:before{
+			z-index:-1;
+			height: 60%;
+		}
+	}
 }

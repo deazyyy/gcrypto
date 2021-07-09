@@ -6,7 +6,8 @@ import Accountdetails from "../../Modals/Account";
 import Vaultdetails from "../../Modals/Vaultdetails";
 import Yourswamp from "../../Modals/Yourswamp";
 import Lpair from "../../Modals/Lpair";
-
+import UnlockButton from '../../../components/UnlockButton/UnlockButton'
+ 
 const Header = (props) => {
   const AccountModal = useRef(null);
   const VaultModal = useRef(null);
@@ -47,7 +48,8 @@ const Header = (props) => {
         </ul>
       </div>
       <div id="nav-right">
-        <Buttons id="navbtn" name="Buy Tron" width="140px" height="46px" />
+      <UnlockButton className="navbtn" title="Buy Tron" width="140px" height="46px" />
+        {/* <Buttons id="navbtn" name="Buy Tron" width="140px" height="46px" /> */}
         <div id="navtxt">
           pTopia <span id="dollar">${props.dollar}</span>
         </div>
